@@ -1,0 +1,122 @@
+// For 2.x reset compatibility
+//   import 'antd/style/v2-compatible-reset';
+//     or
+//   @import '~antd/style/v2-compatible-reset.css';
+// unify the setting of elements's margin and padding for browsers
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+
+// add by cai
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(29, 34, 40, 0.2);
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-track {
+  background: inherit;
+}
+*::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-scrollbarbutton:hover {
+  background-color: rgba(29, 34, 40, 0.4);
+}
+
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix::after,
+.clearfix::before {
+  display: table;
+  content: ' ';
+}
+
+.loading {
+  margin: auto;
+  text-align: center;
+}
