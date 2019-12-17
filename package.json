@@ -1,6 +1,6 @@
 {
   "name": "@joy/joy-pro",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "中后台业务组件库",
   "author": "songzi <251297181@qq.com>",
   "description": "基于react和antd的ui业务组件库",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://192.168.1.110/web-support/joy-pro"
+    "url": "http://192.168.1.110/"
   },
   "bugs": {
     "url": "http://192.168.1.110/web-support/joy-pro"
@@ -212,7 +212,7 @@
     "site": "cross-env NODE_ENV=production bisheng build --ssr -c ./site/bisheng.config.js && node ./scripts/generateColorLess.js",
     "predeploy": "antd-tools run clean && npm run site && cp netlify.toml CNAME _site && cp .circleci/config.yml _site",
     "deploy": "bisheng gh-pages --push-only",
-    "deploy:china-mirror": "git checkout gh-pages && git pull origin gh-pages && git push git@192.168.1.110:web-support/joy-pro.git gh-pages",
+    "deploy:china-mirror": "git checkout gh-pages && git pull master gh-pages && git push git@192.168.1.110:web-support/joy-pro.git gh-pages",
     "pub": "antd-tools run pub",
     "cbuild": "antd-tools run dist && antd-tools run compile",
     "pre-publish": "npm run check-commit",

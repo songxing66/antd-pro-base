@@ -8,7 +8,7 @@ action "Deploy" {
   runs = [
     "sh",
     "-c",
-    "git remote set-url origin https://${DEPLOY_TOKEN}@github.com/ant-design/ant-design.git && npm install && npm run deploy"
+    "git remote set-url origin https://${DEPLOY_TOKEN}@192.168.1.110:web-support/joy-pro.git && npm install && npm run deploy"
   ],
   secrets = ["DEPLOY_TOKEN"]
 }
