@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <title>joy-pro</title>
-    <link rel="icon" href="{{ root }}icon.png" type="image/x-icon" />
-    {% for cssFile in manifest["css"] %}
-    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
-    {% endfor %}
+    <link rel="icon" href="/icon.png" type="image/x-icon" />
+    
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,matchMedia"></script>
     <script>
       (function() {
@@ -76,10 +74,10 @@
   </head>
   <body>
     <div id="react-content">
-      {{ content | safe }}
+      
     </div>
-    {% for jsFile in manifest["js"] %}
-    <script src="{{ root }}{{ jsFile }}"></script>
-    {% endfor %}
+    
+    <script src="/index.js"></script>
+    
   </body>
 </html>

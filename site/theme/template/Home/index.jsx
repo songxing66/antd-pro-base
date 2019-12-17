@@ -3,6 +3,8 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import { Link } from 'bisheng/router';
 import DocumentTitle from 'react-document-title';
 import PropTypes from 'prop-types';
+import iconSrc from '../../static/icon.png';
+
 import * as utils from '../utils';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -23,7 +25,7 @@ class Home extends React.Component {
           <div className="cover-wrapper">
             <div className="cover-content">
               <div className="cover-icon">
-                <img src="http://resimg.iqeq.cn/webapires/cbf/5c878948c598a.jpg" alt="" />
+                <img style={{ width: 200 }} src={iconSrc} alt="" />
               </div>
               <h3>@joy/joy-pro</h3>
               <div className="cover-link">

@@ -78,7 +78,7 @@ module.exports = {
     config.externals = {
       'react-router-dom': 'ReactRouterDOM',
     };
- 
+
     if (usePreact) {
       // eslint-disable-next-line
       config.resolve.alias = Object.assign({}, config.resolve.alias, {
@@ -97,7 +97,6 @@ module.exports = {
     alertBabelConfig(config.module.rules);
 
     config.plugins.push(new CSSSplitWebpackPlugin({ size: 4000 }));
-
     return config;
   },
 

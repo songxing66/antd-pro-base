@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import { Select, Menu, Row, Col, Icon, Popover, Button } from 'antd';
 import * as utils from '../utils';
 import { version as antdVersion } from '../../../../package.json';
+import iconSrc from '../../static/icon.png';
 
 const { Option } = Select;
 
@@ -158,7 +159,7 @@ export default class Header extends React.Component {
         <Row>
           <Col xxl={4} xl={5} lg={5} md={5} sm={24} xs={24}>
             <Link to={utils.getLocalizedPathname('/', isZhCN)} id="logo">
-              <img alt="logo" src="http://resimg.iqeq.cn/icon.png" />
+              <img alt="logo" src={iconSrc} />
             </Link>
             <h2>JOY-PRO</h2>
           </Col>

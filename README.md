@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img width="200" src="http://resimg.iqeq.cn/iconB.png">
+    <img width="200" src="./site/theme/static/icon.png">
   </a>
 </p>
 
