@@ -1,8 +1,8 @@
 ---
 category: Components
-type: 测试分组
-title: ButtonPlus
-subtitle: 按钮封装
+type: 表格
+title: StandardTable
+subtitle: 基础表格
 ---
 
 下拉选择器。

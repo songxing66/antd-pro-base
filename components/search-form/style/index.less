@@ -1,0 +1,56 @@
+@import '../../style/themes/index';
+
+.@{ant-prefix}-searchBox {
+  .ant-form-item {
+    margin-bottom: 24px;
+
+    > .ant-form-item-label {
+      line-height: 32px;
+
+      height: 32px;
+    }
+    .ant-form-item-control {
+      line-height: 32px;
+    }
+  }
+  .ant-form-item-control-wrapper {
+    height: 32px;
+  }
+
+  &-input {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  &-button {
+    width: 220px;
+  }
+  &-buttons-submit {
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 24px;
+  }
+  &&-horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    .@{ant-prefix}-searchBox-button {
+      padding-left: 20px;
+    }
+    .ant-form-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      > .ant-form-item-label {
+        width: auto;
+
+        padding-right: 8px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+}

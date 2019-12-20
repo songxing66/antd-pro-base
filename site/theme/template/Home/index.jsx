@@ -20,18 +20,18 @@ class Home extends React.Component {
     } = this.context;
     const isZhCN = locale === 'zh-CN';
     return (
-      <DocumentTitle title="Ant Design - CLY">
+      <DocumentTitle title="JOY PRO">
         <>
           <div className="cover-wrapper">
             <div className="cover-content">
               <div className="cover-icon">
                 <img style={{ width: 200 }} src={iconSrc} alt="" />
               </div>
-              <h3>@joy/joy-pro</h3>
+              <h3>joy-pro</h3>
               <div className="cover-link">
                 <a
                   className="github"
-                  href="https://github.com/pigzhuzhu55/ant-design-cly"
+                  href="http://192.168.1.110/web-support/joy-pro"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
