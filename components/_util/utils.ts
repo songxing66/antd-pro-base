@@ -3,7 +3,7 @@
  * @Author: /songzi
  * @Date: 2019-07-11 12:52:36
  * @Last Modified by: songzi
- * @Last Modified time: 2019-12-17 18:27:58
+ * @Last Modified time: 2019-12-23 11:30:32
  */
 
 /**
@@ -11,9 +11,9 @@
  * @param {object} data form原始数据
  * @param {object} formateConfig from format配置项
  */
-const batchDataFormat = (data, formatConfig) => {
+const batchDataFormat = (data: { [x: string]: any }, formatConfig: any[]) => {
   const dataKeys = Object.keys(data);
-  const newData = {};
+  const newData: any = {};
   dataKeys.forEach(key => {
     const hasMoment =
       Object.prototype.toString.call(data[key]) === '[object Array]' ? data[key][0] : data[key];
@@ -27,7 +27,7 @@ const batchDataFormat = (data, formatConfig) => {
       newData[key] = data[key].format(format);
       return;
     }
-    newData[key] = data[key].map(item => item.format(format));
+    newData[key] = data[key].map((item: { format: (arg0: any) => any }) => item.format(format));
   });
   return newData;
 };
@@ -37,7 +37,7 @@ const batchDataFormat = (data, formatConfig) => {
  * @param {string} fildeName 配置项名称
  * @returns
  */
-const getFormatFromConfig = (config, fildeName) => {
+const getFormatFromConfig = (config: any[], fildeName: string) => {
   const filterFormat = config.filter(item => item[fildeName]);
   const filterMap = filterFormat.map(item => {
     const { name } = item;
@@ -58,12 +58,12 @@ const getFormatFromConfig = (config, fildeName) => {
  * @param  {boolean}  immediate   设置为ture时，调用触发于开始边界而不是结束边界
  * @return {function}             返回客户调用函数
  */
-function debounce(func, wait, immediate) {
-  let timeout;
-  let args;
-  let context;
-  let timestamp;
-  let result;
+function debounce(func: { call: (arg1: any, ...arg2: any) => any }, wait: number, immediate: any) {
+  let timeout: any;
+  let args: any;
+  let context: any;
+  let timestamp: any;
+  let result: any;
   function later() {
     // 据上一次触发时间间隔
     const last = Number(new Date()) - timestamp;
@@ -82,7 +82,7 @@ function debounce(func, wait, immediate) {
       }
     }
   }
-  return function set(..._args) {
+  return function set(..._args: any[]) {
     // console.log(_args);
     context = this;
     args = _args;
@@ -105,8 +105,8 @@ function debounce(func, wait, immediate) {
  * @param {*} columns
  * @returns
  */
-const initTotalList = columns => {
-  const totalList = [];
+const initTotalList = (columns: any[]) => {
+  const totalList: any[] = [];
   columns.forEach(column => {
     if (column.needTotal) {
       totalList.push({ ...column, total: 0 });
@@ -119,7 +119,7 @@ const initTotalList = columns => {
  * @description 获取obj的值
  * @param {*} obj
  */
-const getValue = obj =>
+const getValue = (obj: { [x: string]: any }) =>
   Object.keys(obj)
     .map(key => obj[key])
     .join(',');
@@ -128,8 +128,8 @@ const getValue = obj =>
  * @description 展开树
  * @param {*} tree 树结构对象
  */
-const breadthSearch = tree => {
-  let stark = [];
+const breadthSearch = (tree: any): any => {
+  let stark: any[] = [];
   stark = stark.concat(tree);
   while (stark.length) {
     const temp = stark.shift();
@@ -146,8 +146,8 @@ const breadthSearch = tree => {
  * @param {*} value
  * @param {*} dataArry
  */
-const treeQuery = (key, value, dataArry) => {
-  let stark = [];
+const treeQuery = (key: string | number, value: any, dataArry: any) => {
+  let stark: any[] = [];
   stark = stark.concat(dataArry);
   while (stark.length) {
     const temp = stark.shift();
@@ -168,14 +168,18 @@ const treeQuery = (key, value, dataArry) => {
  * @param {String} nameType 指定作为lable的字段名称
  * @returns
  */
-const revOption = (data = [], valueType, nameType) => {
+const revOption = (
+  data: Array<any> = [],
+  valueType: string | number,
+  nameType: string | number,
+) => {
   const optionValue = data.map(item => item[valueType]);
   const optionName = data.map(item => item[nameType]);
   return { optionValue, optionName };
 };
 
-const fraction = (num1, num2) => {
-  function gcd(a, b) {
+const fraction = (num1: any, num2: any) => {
+  function gcd(a: number, b: number): any {
     // 欧几里德算法
     return b === 0 ? a : gcd(b, a % b);
   }
@@ -192,12 +196,12 @@ const fraction = (num1, num2) => {
 /*
  * 数字序号转字符串序号  0 => "A"
  */
-const indexToString = index => {
+const indexToString = (index: any) => {
   let charcode;
   return index
     .toString(26)
     .split('')
-    .map((item, i) => {
+    .map((item: string) => {
       charcode = item.charCodeAt(0);
       charcode += charcode >= 97 ? 10 : 49;
       return String.fromCharCode(charcode);
@@ -209,13 +213,13 @@ const indexToString = index => {
 /*
  * 字符串序号转数字序号  "A" => 0
  */
-const stringToIndex = str => {
+const stringToIndex = (str: string) => {
   let charcode;
   return parseInt(
     str
       .toLowerCase()
       .split('')
-      .map((item, i) => {
+      .map(item => {
         charcode = item.charCodeAt(0);
         charcode -= charcode < 107 ? 49 : 10;
         return String.fromCharCode(charcode);
@@ -236,4 +240,5 @@ export {
   fraction,
   indexToString,
   stringToIndex,
+  breadthSearch,
 };

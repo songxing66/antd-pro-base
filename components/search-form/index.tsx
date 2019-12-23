@@ -3,7 +3,7 @@
  * @Author: /songzi
  * @Date: 2019-07-10 16:16:16
  * @Last Modified by: songzi
- * @Last Modified time: 2019-12-20 15:08:54
+ * @Last Modified time: 2019-12-23 11:34:52
  */
 
 import * as React from 'react';
@@ -38,7 +38,7 @@ interface SearchFormState {
  * @param {*} changedFields
  * @param {*} allFields
  */
-const onFieldsChange = (props: any, changedFields: any, allFields: any) => {
+const onFieldsChange = () => {
   //   console.log(changedFields.datePickerTest.value.format());
 };
 /**
@@ -47,9 +47,7 @@ const onFieldsChange = (props: any, changedFields: any, allFields: any) => {
  * @param {*} changedValues
  * @param {*} allValues
  */
-const onValuesChange = (props: any, changedValues: any, allValues: any) => {
-  console.log(allValues);
-};
+const onValuesChange = () => {};
 
 class SearchForm extends React.PureComponent<SearchFormProps, SearchFormState> {
   static defaultProps = {

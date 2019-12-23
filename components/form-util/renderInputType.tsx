@@ -3,7 +3,7 @@
  * @Author: /songzi
  * @Date: 2019-07-10 16:15:04
  * @Last Modified by: songzi
- * @Last Modified time: 2019-12-20 13:32:08
+ * @Last Modified time: 2019-12-23 11:32:08
  */
 
 import React from 'react';
@@ -58,21 +58,21 @@ const RenderInputType = (inputConfig: InputConf) => {
       return <Input />;
   }
 };
-/**
- * @description 遍历opthion配置
- * @author songs
- * @date 2019-07-10
- * @returns
- * @memberof RenderInputType
- */
-function mapOption(optionValue: any[], optionName: any[]) {
-  const optionList = optionValue.map((item: string, index: number) => (
-    <Option key={item} value={item}>
-      {optionName[index] || item}
-    </Option>
-  ));
-  return optionList;
-}
+// /**
+//  * @description 遍历opthion配置
+//  * @author songs
+//  * @date 2019-07-10
+//  * @returns
+//  * @memberof RenderInputType
+//  */
+// function mapOption(optionValue: any[], optionName: any[]) {
+//   const optionList = optionValue.map((item: string, index: number) => (
+//     <Option key={item} value={item}>
+//       {optionName[index] || item}
+//     </Option>
+//   ));
+//   return optionList;
+// }
 function renderOptions(optionList: object[], valueFiled: string, nameFiled: string) {
   const optionDomList = optionList.map((item: AnyObject) => {
     return (

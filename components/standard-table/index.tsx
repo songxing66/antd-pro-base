@@ -3,7 +3,7 @@ import { Table, Alert } from 'antd';
 import { TableProps, ColumnProps } from 'antd/es/table';
 import classNames from 'classnames';
 import { PaginationProps } from 'antd/es/pagination';
-const { PureComponent, Fragment } = React;
+const { Fragment } = React;
 
 interface DataAny {
   [propName: string]: any;
@@ -40,7 +40,7 @@ function initTotalList(columns: Array<DataAny & ColumnProps<DataAny>>) {
   return totalList;
 }
 
-class StandardTable extends PureComponent<StandardTableProps, StandardTableState> {
+class StandardTable extends React.PureComponent<StandardTableProps, StandardTableState> {
   static defaultProps = {
     prefixCls: 'ant-standardtable',
   };
