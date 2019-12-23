@@ -1,0 +1,44 @@
+.searchBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  :global {
+    .ant-form-item {
+      margin-bottom: 24px;
+      margin-right: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      > .ant-form-item-label {
+        width: auto;
+        line-height: 32px;
+        padding-right: 8px;
+        height: 32px;
+      }
+      .ant-form-item-control {
+        line-height: 32px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      height: 32px;
+    }
+  }
+  .searchInputBox {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .searchButtonBox {
+    width: 220px;
+    padding-left: 20px;
+  }
+}
+
+.submitButtons {
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 24px;
+}

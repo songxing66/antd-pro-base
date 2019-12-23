@@ -15,9 +15,8 @@ if (
 }
 /* @remove-on-es-build-end */
 export { default as DatePicker } from './range-picker';
-
 export { default as SelectDown } from './selectdown';
 export { default as SelectBox } from './selectbox';
-
 export { default as SearchTemplate } from './search-template';
-export { default as ButtonPlus } from './button-plus';
+export { default as SearchForm } from './search-form';
+export { default as StandardTable } from './standard-table';
