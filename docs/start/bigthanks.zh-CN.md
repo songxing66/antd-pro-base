@@ -1,5 +1,5 @@
 ---
-category: ANT CLY
+category: JOY PRO
 title: 鸣谢
 order: 1
 ---

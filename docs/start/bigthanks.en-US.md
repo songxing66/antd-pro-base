@@ -1,5 +1,5 @@
 ---
-category: ANT CLY
+category: JOY PRO
 title: Thanks
 order: 1
 ---
