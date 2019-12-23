@@ -16,14 +16,14 @@ JOY-PRO 基于阿里的开源组件 ant.design 基础上的二次封装，主要
 #### 永久替换 npm 源为 joy 私有库（joy 私有库没有想要安装的包时会向上查找淘宝源）
 
 ```bash
- npm config set registry http://localhost:4873/
+ npm config set registry http://10.1.3.183:4873/
  npm install --save @joy/joy-pro
 ```
 
 #### 安装包时切换源
 
 ```bash
-npm install --save @joy/joy-pro --registry http://localhost:4873/
+npm install --save @joy/joy-pro --registry http://10.1.3.183:4873/
 ```
 
 ### 使用组件
