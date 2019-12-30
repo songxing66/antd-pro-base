@@ -12,6 +12,6 @@
 
 </div>
 
-## [文档地址](http://cly.iqeq01.com)
+## [文档地址](http://10.1.3.183:8002)
 
-## [npm 地址](https://www.npmjs.com/package/@joy/joy-pro)
+## [npm 地址](http://10.1.3.183:4873/-/web/detail/@joy/joy-pro)
