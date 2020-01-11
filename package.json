@@ -1,15 +1,18 @@
 {
     "name": "@joy/joy-pro",
-    "version": "0.1.0",
+    "version": "0.1.47",
     "title": "中后台业务组件库",
     "author": "songzi <251297181@qq.com>",
     "description": "基于react和antd的ui业务组件库",
     "homepage": "",
     "private": false,
     "keywords": [
-        "joy-pro", "cly"
+        "joy-pro",
+        "cly"
     ],
-    "contributors": ["ant"],
+    "contributors": [
+        "ant"
+    ],
     "publishConfig": {
         "registry": "http://10.1.3.183:4873/"
     },
@@ -23,7 +26,9 @@
     "main": "lib/index.js",
     "module": "es/index.js",
     "files": [
-        "dist", "lib", "es"
+        "dist",
+        "lib",
+        "es"
     ],
     "typings": "lib/index.d.ts",
     "license": "MIT",
@@ -35,6 +40,7 @@
         "@ant-design/create-react-context": "^0.2.4",
         "@ant-design/icons": "~2.1.1",
         "@ant-design/icons-react": "~2.0.1",
+        "@joy/watermarkjs": "^2.0.21",
         "antd": "^3.20.5",
         "array-tree-filter": "^2.1.0",
         "babel-runtime": "6.x",
@@ -84,7 +90,11 @@
         "react-lifecycles-compat": "^3.0.4",
         "resize-observer-polyfill": "^1.5.1",
         "shallowequal": "^1.1.0",
+        "shortid": "^2.2.15",
         "umi-request": "^1.1.0",
+        "unstated-next": "^1.1.0",
+        "use-media-antd-query": "^1.0.1",
+        "use-merge-value": "^1.0.1",
         "warning": "~4.0.3"
     },
     "devDependencies": {
@@ -204,8 +214,8 @@
         "dist": "antd-tools run dist",
         "compile": "antd-tools run compile",
         "tsc": "tsc",
-		"start": "rimraf _site && mkdir _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
-		"start:prod": "rimraf _site && mkdir _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=production bisheng start -c ./site/bisheng.config.js",
+        "start": "rimraf _site && mkdir _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
+        "start:prod": "rimraf _site && mkdir _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=production bisheng start -c ./site/bisheng.config.js",
         "start:preact": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=preact bisheng start -c ./site/bisheng.config.js",
         "site": "cross-env NODE_ENV=production bisheng build --ssr -c ./site/bisheng.config.js && node ./scripts/generateColorLess.js",
         "predeploy": "antd-tools run clean && npm run site && cp netlify.toml CNAME _site && cp .circleci/config.yml _site",
@@ -216,31 +226,31 @@
         "pre-publish": "npm run check-commit",
         "unpub": "npm unpublish @joy/joy-pro --force",
         "authors": "git log --format='%aN <%aE>' | sort -u | grep -v 'users.noreply.github.com' | grep -v 'gitter.im' | grep -v '.local>' | grep -v 'alibaba-inc.com' | grep -v 'alipay.com' | grep -v 'taobao.com' > AUTHORS.txt",
-    "lint-staged": "lint-staged",
-    "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",
-    "lint-staged:es": "eslint ./.*.js ./webpack.config.js",
-    "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
-    "prettier": "prettier -c --write '**/*'"
-  },
-  "pre-commit": [
-    "lint-staged"
-  ],
-  "lint-staged": {
-    "**/*.{js,jsx,tsx,ts,less,md,json}": [
-      "prettier --write",
-      "git add"
+        "lint-staged": "lint-staged",
+        "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",
+        "lint-staged:es": "eslint ./.*.js ./webpack.config.js",
+        "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
+        "prettier": "prettier -c --write '**/*'"
+    },
+    "pre-commit": [
+        "lint-staged"
+    ],
+    "lint-staged": {
+        "**/*.{js,jsx,tsx,ts,less,md,json}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "sideEffects": [
+        "dist/*",
+        "es/**/style/*",
+        "lib/**/style/*",
+        "*.less"
+    ],
+    "browserslist": [
+        "last 2 version",
+        "Firefox ESR",
+        "> 1%",
+        "ie >= 9"
     ]
-  },
-  "sideEffects": [
-    "dist/*",
-    "es/**/style/*",
-    "lib/**/style/*",
-    "*.less"
-  ],
-  "browserslist": [
-    "last 2 version",
-    "Firefox ESR",
-    "> 1%",
-    "ie >= 9"
-  ]
 }

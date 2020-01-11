@@ -143,13 +143,27 @@ const dataList = [
   },
 ];
 
-const paginations = { total: 14, pageSize: 10, current: 1 };
+const paginations = {
+  total: 14,
+  pageSize: 10,
+  current: 1,
+  showSizeChanger: true,
+  showQuickJumper: true,
+};
 const OS = ['iOS', 'Android'];
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedRows: [],
+      sInfo: {
+        watermark_txt: '测试水印.2019.12.12.192222', // 水印的内容
+        watermark_color: '#ddd', // 水印字体颜色
+        watermark_alpha: 0.4, // 水印透明度，要求设置在大于等于0.005
+        watermark_x_space: 100, // 水印x轴间隔
+        watermark_y_space: 100, // 水印y轴间隔
+        watermark_width: 300, // 水印宽度
+      },
     };
   }
 
@@ -257,15 +271,16 @@ class App extends React.Component {
   };
 
   render() {
-    const { selectedRows } = this.state;
+    const { selectedRows, sInfo } = this.state;
     const { revcolumns } = this;
     return (
       <div>
         <StandardTable
+          isWatermark={true}
+          watermark={sInfo}
           pagination={paginations}
           dataSource={dataList}
           selectedRows={selectedRows}
-          paginationProps={{ showSizeChanger: true, showQuickJumper: true }}
           showSelect
           scroll={{ x: 1490 }}
           columns={revcolumns()}

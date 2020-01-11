@@ -6,6 +6,7 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
     "jsx": "preserve",
     "noUnusedParameters": true,
     "noUnusedLocals": true,
