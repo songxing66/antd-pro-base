@@ -14,7 +14,7 @@ JOY-PRO 基于阿里的开源组件 ant.design 基础上的二次封装，主要
 ### 安装
 
 ```bash
-npm install --save @joy/joy-pro
+npm install --save @songxizi/joy-pro
 ```
 
 ### 使用组件

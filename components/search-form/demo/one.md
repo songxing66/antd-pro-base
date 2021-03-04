@@ -10,8 +10,9 @@ title:
 ## en-US
 
 ```jsx
-import { SearchForm } from '@joy/joy-pro';
+import { SearchForm } from '@songxizi/joy-pro';
 import moment from 'moment';
+
 const optionData = [
   {
     name: '选项1',
@@ -115,7 +116,7 @@ class App extends React.Component {
           gutter={{ md: 10 }}
           useCol={{ sm: 24, md: 12, xl: 8, xxl: 8 }}
           onSearch={this.actionSearch}
-        ></SearchForm>
+        />
       </div>
     );
   }

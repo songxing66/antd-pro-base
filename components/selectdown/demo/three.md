@@ -14,7 +14,7 @@ title:
 Asynchronous remote loading of data is supported, and the data format is defined in this example as follows: { "code":0, "data":[ { "key":"", "title":"" },...] }
 
 ```jsx
-import { SelectDown } from '@joy/joy-pro';
+import { SelectDown } from '@songxizi/joy-pro';
 import { extend } from 'umi-request';
 
 const request = extend({});

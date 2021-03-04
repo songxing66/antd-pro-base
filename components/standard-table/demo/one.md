@@ -10,9 +10,10 @@ title:
 ## en-US
 
 ```jsx
-import { StandardTable } from '@joy/joy-pro';
+import { StandardTable } from '@songxizi/joy-pro';
 import { Popconfirm, Switch, message, Icon } from 'antd';
 import moment from 'moment';
+
 const revOsType = type => {
   switch (type) {
     case 'Android':
@@ -226,7 +227,7 @@ class App extends React.Component {
         dataIndex: 'OS',
         width: 80,
         filters: OS.map(item => ({ text: item, value: item })),
-        render: val => <Icon type={revOsType(val)}></Icon>,
+        render: val => <Icon type={revOsType(val)} />,
       },
       {
         title: '应用名称',
@@ -276,7 +277,7 @@ class App extends React.Component {
     return (
       <div>
         <StandardTable
-          isWatermark={true}
+          isWatermark
           watermark={sInfo}
           pagination={paginations}
           dataSource={dataList}
@@ -287,7 +288,7 @@ class App extends React.Component {
           rowKey="userId"
           onSelectRow={this.handleSelectRows}
           onChange={this.handleStandardTableChange}
-        ></StandardTable>
+        />
       </div>
     );
   }

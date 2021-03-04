@@ -67,9 +67,9 @@ module.exports = {
   webpackConfig(config) {
     // eslint-disable-next-line
     config.resolve.alias = {
-      '@joy/joy-pro/lib': path.join(process.cwd(), 'components'),
-      '@joy/joy-pro/es': path.join(process.cwd(), 'components'),
-      '@joy/joy-pro': path.join(process.cwd(), 'index'),
+      '@songxizi/joy-pro/lib': path.join(process.cwd(), 'components'),
+      '@songxizi/joy-pro/es': path.join(process.cwd(), 'components'),
+      '@songxizi/joy-pro': path.join(process.cwd(), 'index'),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };

@@ -1,5 +1,5 @@
 {
-    "name": "@joy/joy-pro",
+    "name": "@songxizi/joy-pro",
     "version": "0.1.47",
     "title": "中后台业务组件库",
     "author": "songzi <251297181@qq.com>",
@@ -13,15 +13,12 @@
     "contributors": [
         "ant"
     ],
-    "publishConfig": {
-        "registry": "http://10.1.3.183:4873/"
-    },
     "repository": {
         "type": "git",
-        "url": "http://192.168.1.110/"
+        "url": "https://github.com/songxing66/antd-pro-base"
     },
     "bugs": {
-        "url": "http://192.168.1.110/web-support/joy-pro"
+        "url": "https://github.com/songxing66/antd-pro-base/issues"
     },
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -224,7 +221,7 @@
         "pub": "antd-tools run pub",
         "cbuild": "antd-tools run dist && antd-tools run compile",
         "pre-publish": "npm run check-commit",
-        "unpub": "npm unpublish @joy/joy-pro --force",
+        "unpub": "npm unpublish @songxizi/joy-pro --force",
         "authors": "git log --format='%aN <%aE>' | sort -u | grep -v 'users.noreply.github.com' | grep -v 'gitter.im' | grep -v '.local>' | grep -v 'alibaba-inc.com' | grep -v 'alipay.com' | grep -v 'taobao.com' > AUTHORS.txt",
         "lint-staged": "lint-staged",
         "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",

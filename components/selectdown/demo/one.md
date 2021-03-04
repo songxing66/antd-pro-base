@@ -14,7 +14,7 @@ title:
 Currently, we have customized two types of selectors `Select'and`Date Picker' for `SelectDown/>'. Among them`Select'can be selected more. Some may wonder that the official ANTD of these components already exists, yes, but Date Picker does not have this drop-down option, so there is only a second encapsulation to satisfy the query list component as a filter combo box.
 
 ```jsx
-import { SelectDown } from '@joy/joy-pro';
+import { SelectDown } from '@songxizi/joy-pro';
 
 function handleChangeSelect(myProps) {
   console.log(myProps);
@@ -24,7 +24,10 @@ const data = {
   text: '性质',
   key: 'orgType',
   value: '',
-  options: [{ title: '直营', key: '0' }, { title: '加盟', key: '1' }],
+  options: [
+    { title: '直营', key: '0' },
+    { title: '加盟', key: '1' },
+  ],
 };
 const data2 = {
   text: '合同过期时间',
@@ -40,7 +43,7 @@ ReactDOM.render(
       name={data2.key}
       {...data2}
       onChange={childPros => handleChangeSelect(childPros)}
-      showItemSeparator={true}
+      showItemSeparator
     />
   </div>,
   mountNode,

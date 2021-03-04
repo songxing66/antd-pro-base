@@ -14,7 +14,7 @@ title:
 Loading data remotely, The data format is the same as the previous example, increasing the linkage effect
 
 ```jsx
-import { SelectDown } from '@joy/joy-pro';
+import { SelectDown } from '@songxizi/joy-pro';
 import { extend } from 'umi-request';
 
 const request = extend({});
@@ -30,7 +30,7 @@ class App extends React.Component {
           value: '',
           child: 'city',
           multiple: true,
-          loadData: ()=> request(`http://test.lnxm.iqeq.cn/api/none/common/province/list`),
+          loadData: () => request(`http://test.lnxm.iqeq.cn/api/none/common/province/list`),
         },
         {
           text: '市',
@@ -39,7 +39,8 @@ class App extends React.Component {
           parent: 'province',
           child: 'county',
           multiple: true,
-          loadData: provinceId => request(`http://test.lnxm.iqeq.cn/api/none/common/city/list?provinceId=${provinceId}`),
+          loadData: provinceId =>
+            request(`http://test.lnxm.iqeq.cn/api/none/common/city/list?provinceId=${provinceId}`),
         },
         {
           text: '县',
@@ -47,7 +48,8 @@ class App extends React.Component {
           value: '',
           parent: 'city',
           multiple: true,
-          loadData: cityId => request(`http://test.lnxm.iqeq.cn/api/none/common/county/list?cityId=${cityId}`),
+          loadData: cityId =>
+            request(`http://test.lnxm.iqeq.cn/api/none/common/county/list?cityId=${cityId}`),
         },
       ],
     };
@@ -100,7 +102,6 @@ class App extends React.Component {
       filters,
     });
   };
-
 
   render() {
     const { filters } = this.state;

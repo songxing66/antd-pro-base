@@ -51,12 +51,12 @@ function finalizeDist() {
   if (fs.existsSync(path.join(__dirname, './dist'))) {
     // Build less entry file: dist/antd.less
     fs.writeFileSync(
-      path.join(process.cwd(), 'dist', '@joy/joy-pro.less'),
+      path.join(process.cwd(), 'dist', '@songxizi/joy-pro.less'),
       '@import "../lib/style/index.less";\n@import "../lib/style/components.less";',
     );
 
     // eslint-disable-next-line
-    console.log('Built a entry less file to dist/@joy/joy-pro.less');
+    console.log('Built a entry less file to dist/@songxizi/joy-pro.less');
   }
 }
 

@@ -16,7 +16,9 @@ function exitProcess(code = 1) {
 
 // eslint-disable-next-line no-unused-vars
 async function checkVersion() {
-  const { versions } = await fetch('http://registry.npmjs.org/@joy/joy-pro').then(res => res.json());
+  const { versions } = await fetch('http://registry.npmjs.org/@songxizi/joy-pro').then(res =>
+    res.json(),
+  );
   if (version in versions) {
     console.log(chalk.yellow('😈 Current version already exists. Forget update package.json?'));
     console.log(chalk.cyan(' => Current:'), version);

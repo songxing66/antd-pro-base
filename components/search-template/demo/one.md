@@ -10,7 +10,7 @@ title:
 ## en-US
 
 ```jsx
-import { SearchTemplate } from '@joy/joy-pro';
+import { SearchTemplate } from '@songxizi/joy-pro';
 import { extend } from 'umi-request';
 
 const request = extend({});

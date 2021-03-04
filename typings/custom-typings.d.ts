@@ -107,6 +107,6 @@ declare module 'react-lifecycles-compat';
 
 declare module 'react-copy-to-clipboard';
 
-declare module '@joy/watermarkjs';
+declare module '@songxizi/better-watermark';
 
 declare module 'shortid';

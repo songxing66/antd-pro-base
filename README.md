@@ -12,6 +12,6 @@
 
 </div>
 
-## [文档地址](http://10.1.3.183:8002)
+## [文档地址](https://github.com/songxing66/antd-pro-base)
 
-## [npm 地址](http://10.1.3.183:4873/-/web/detail/@joy/joy-pro)
+## [npm 地址](https://www.npmjs.com/package/@songxizi/joy-pro)

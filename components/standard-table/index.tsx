@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Table, Alert } from 'antd';
 import { TableProps, ColumnProps } from 'antd/es/table';
-import WatermarkDom from '@joy/watermarkjs';
+import WatermarkDom from '@songxizi/better-watermark';
 import { generate as generateId } from 'shortid';
 import classNames from 'classnames';
 const { Fragment } = React;
