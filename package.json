@@ -40,7 +40,7 @@
         "@ant-design/create-react-context": "^0.2.4",
         "@ant-design/icons": "~2.1.1",
         "@ant-design/icons-react": "~2.0.1",
-        "@joy/watermarkjs": "^2.0.21",
+        "@songxizi/better-watermark": "^1.0.23",
         "antd": "^3.20.5",
         "array-tree-filter": "^2.1.0",
         "babel-runtime": "6.x",
